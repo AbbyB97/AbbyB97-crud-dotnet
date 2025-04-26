@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable> <!-- Enables nullable reference types to help avoid null reference exceptions. -->
+    <ImplicitUsings>enable</ImplicitUsings> <!-- Automatically includes commonly used namespaces. -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- This package is used for design-time tools in Entity Framework Core, such as migrations and scaffolding. -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets> <!-- Prevents this package from being exposed to consuming projects. -->
+    </PackageReference>
+
+    <!-- This package provides support for SQLite as the database provider for Entity Framework Core. -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+
+    <!-- This package adds extensions for building minimal APIs in ASP.NET Core, simplifying endpoint definitions. -->
+    <PackageReference Include="MinimalApis.Extensions" Version="0.11.0" />
+  </ItemGroup>
+
+</Project>
